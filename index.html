@@ -1,45 +1,36 @@
-<!DOCTYPE html>
+
 <html lang="pt-br">
-<head>
-    <meta charset="utf-8">
-    <title>Calculadora de bases </title>
-
-    <link rel="stylesheet" href="styles/main.css">
-    
-</head>
-<body id="page-bases-numericas">
-    <div id="container">
-        <header class="page-header">
-            <strong>Calculadora</strong>
-
-        </header>
-        <main>
-            <div class="input-block">
-                <label for="binaria">Binario----</label>
-                <input name="binaria" id="binaria" type="text" onblur="fromBinaria()" onkeypress="validandoBinaria()">
-            </div>
-            
-            <div class="input-block">
-                <label for="octal">Octa--------</label>
-                <input name="octal" id="octal" type="text" onblur="fromOctal()" onkeypress="validandoOctal()">
-            </div>
-            <div class="input-block">
-                <label for="decimal">Decimal---</label>
-                <input name="decimal" id="decimal" type="text"  onblur="fromDecimal()" onkeypress="validandoDecimal()">
-            </div>
-            <div class="input-block">
-                <label for="hexadecimal">Hexadec---</label>
-                <input name="hexadecimal" id="hexadecimal" type="text"  onblur="fromHexadecimal()" onkeypress="validandoHexadecimal()">
-            </div>
-            <div>
-                <p></p>
-            </div>
-    
-            <button id="limpar" onclick="limpar()">Limpar/novo</button>
-    
-        </main>
-      
-    </div>
-    <script src="script/cal.js"></script>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <title>Conversor Base </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="conversor">
+            <table id="tabela">
+                <tr>
+                    <td>Decimal</td>
+                    <td><input type="text" id="decimal"></td>
+                </tr>
+                <tr>
+                    <td>Binário</td>
+                    <td><input type="text" id="binario"></td>
+                </tr>
+                <tr>
+                    <td>Hexa</td>
+                    <td><input type="text" id="hexadec"></td>
+                </tr>
+                <tr>
+                    <td>Octal</td>
+                    <td><input type="text" id="octal"></td>
+                </tr>
+            </table id="tabela">  
+        </div>
+        <p></p>
+        <div id="botoes">
+            <button id="converter">Converter</button>
+            <button id="limpar">Limpar</button>
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>
